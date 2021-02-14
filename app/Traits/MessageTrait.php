@@ -18,7 +18,7 @@ trait MessageTrait
   {
     $this->apiKey = env('AT_API_KEY','KEY'); // use your sandbox app API key for development in the test environment
     $this->username = env('AT_USERNAME'); // use 'sandbox' for development in the test environment
-    $this->from     = env('mCarFix');
+    $this->from     = env('AT_FROM');
     
     //To do
     //Kindly ensure you use the env key set in the construct function
@@ -36,7 +36,7 @@ trait MessageTrait
     $numbers = '726984260';
     $number = '+254'.$numbers;
     $result   = $sms->send([
-      'from'    => 'Grub',
+      'from'    => $this->from,
       'to'      => $number,
       'message' => 'Dear Bernard Arum Ochieng, your defaulting details were forwarded to Ngandas debt recovery, You have been listed as a defaulter by Techtenant Laptops. Details to be posted on buyer beware'
     ]);
