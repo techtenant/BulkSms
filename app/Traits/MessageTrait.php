@@ -33,12 +33,12 @@ trait MessageTrait
     $username = env('AT_USERNAME');
     $AT = new AfricasTalking($username, $apiKey);
     $sms      = $AT->sms();
-    $numbers = '726832378';
+    $numbers = '726984260';
     $number = '+254'.$numbers;
     $result   = $sms->send([
-      'from'    => 'Mukuyu-CS',
+      'from'    => 'Grub',
       'to'      => $number,
-      'message' => 'From lilian Nganda, incoming secretary PRSK council communication desk, have a merry Christmas and a happy new year'
+      'message' => 'Dear Bernard Arum Ochieng, your defaulting details were forwarded to Ngandas debt recovery, You have been listed as a defaulter by Techtenant Laptops. Details to be posted on buyer beware'
     ]);
     dd($result);
   }
